@@ -12,3 +12,6 @@
 - Git
 - GitHub
 - Bash
+
+# Muudatus
+git commit -m "Paranda README typo"
