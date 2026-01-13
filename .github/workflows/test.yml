@@ -1,0 +1,20 @@
+name: Test Scripts
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Test hello.sh
+        run: |
+          chmod +x hello.sh
+          ./hello.sh
+      
+      - name: Test backup.sh
+        run: |
+          chmod +x backup.sh
+          ./backup.sh
+          ls backups/
